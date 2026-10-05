@@ -1,0 +1,370 @@
+#datasetWorkspaceDiv
+{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+#datasetSidebarDiv
+{
+	width: 280px;
+	min-width: 280px;
+	height: 100%;
+	padding: var(--spacing-md);
+	box-sizing: border-box;
+	border-right: 1px solid var(--border-color);
+	overflow: hidden;
+	transition: width .25s ease, min-width .25s ease, padding .25s ease;
+}
+
+
+#datasetSidebarDiv.closed
+{
+	width: 0;
+	min-width: 0;
+	padding: 0;
+	border: none;
+}
+
+
+#datasetSidebarToggleBtn
+{
+	position: absolute;
+	left: 266px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 28px;
+	height: 60px;
+	z-index: 40;
+	opacity: 0;
+	transition: opacity .15s, left .25s ease;
+}
+
+
+#datasetWorkspaceDiv:hover #datasetSidebarToggleBtn
+{
+	opacity: 1;
+}
+
+
+#datasetSidebarDiv.closed + #datasetSidebarToggleBtn
+{
+	left: 0;
+}
+
+
+#datasetSearchInput
+{
+	width: 100%;
+	box-sizing: border-box;
+	margin: var(--spacing-md) 0;
+}
+
+
+#datasetTree
+{
+	flex: 1;
+	overflow-y: auto;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+#datasetTree ul
+{
+	list-style: none;
+	padding-left: var(--spacing-md);
+	margin: var(--spacing-xs) 0;
+}
+
+
+#datasetTree li
+{
+	cursor: pointer;
+	padding: var(--spacing-xs);
+	border-radius: 4px;
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+
+#datasetTree li.searching
+{
+	color: var(--color-text-subdued);
+	background: var(--color-bg-subdued);
+}
+
+
+#datasetTree li:hover
+{
+	background: var(--color-bg-subdued);
+}
+
+
+#datasetTree li.selected,
+#datasetTree li.selected:hover
+{
+	color: var(--color-text-highlight);
+	background: var(--color-bg-highlight);
+}
+
+
+#datasetTree li.selected .datasetSearchMatch
+{
+	color: var(--color-text-highlight);
+	background: var(--color-bg-highlight);
+}
+
+
+.datasetSearchMatch
+{
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+
+#datasetInspectorDiv
+{
+	flex: 1;
+	min-width: 0;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+
+#datasetHeaderDiv
+{
+	padding: var(--spacing-md);
+	flex-shrink: 0;
+	border-bottom: 1px solid var(--border-color);
+}
+
+
+#datasetFormulaBar
+{
+	align-items: center;
+	margin-top: var(--spacing-sm);
+}
+
+
+#datasetFormulaInput
+{
+	flex: 1;
+}
+
+
+#datasetInfoPopup
+{
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: auto;
+	background: var(--color-bg);
+	border: 1px solid var(--border-color);
+	padding: var(--spacing-md);
+}
+
+
+#datasetInfoPopup table
+{
+	border-collapse: collapse;
+}
+
+
+#datasetInfoPopup td
+{
+	border: 1px solid var(--color-text);
+	padding: 4px 10px;
+}
+
+
+#datasetHeaderResizeDiv
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 8px;
+	z-index: 10;
+	pointer-events: none;
+}
+
+
+#datasetHeaderSeparator
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: var(--color-text-highlight);
+	cursor: row-resize;
+	pointer-events: auto;
+}
+
+
+#datasetTableDiv
+{
+	position: relative;
+	flex: 1;
+	overflow: auto;
+}
+
+
+#datasetTableWrapper
+{
+	position: relative;
+	width: max-content;
+	min-width: 100%;
+}
+
+
+#datasetTable
+{
+	border-collapse: separate;
+	border-spacing: 0;
+	padding: 0;
+	table-layout: auto;
+	width: max-content;
+	min-width: 100%;
+}
+
+
+#datasetTable th,
+#datasetTable td
+{
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 4px 8px;
+	max-width: 400px;
+	white-space: normal;
+	text-align: justify;
+	overflow-wrap: anywhere;
+}
+
+
+#datasetTableHead th
+{
+	position: sticky;
+	top: 0;
+	background: var(--color-bg);
+	z-index: 20;
+}
+
+
+.cornerCell
+{
+	min-width: 45px;
+	width: 45px;
+	left: 0;
+	z-index: 5;
+}
+
+
+.rowNumber
+{
+	position: sticky;
+	left: 0;
+	z-index: 5;
+	min-width: 45px;
+	width: 45px;
+	text-align: center;
+}
+
+
+.columnLetter
+{
+	text-align: center;
+}
+
+
+.datasetColumnHeader
+{
+	display: flex;
+	flex-direction: column;
+	min-width: 160px;
+	gap: var(--spacing-xs);
+}
+
+
+.datasetColumnTitle
+{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.datasetColumnActions
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	z-index: 30;
+	opacity: 0;
+	transition: opacity .15s;
+}
+
+
+.datasetColumnActions button
+{
+	background-color: var(--color-bg);
+}
+
+
+#datasetTable th:hover .datasetColumnActions
+{
+	opacity: 1;
+}
+
+
+.datasetColumnTags
+{
+	flex-wrap: wrap;
+}
+
+
+.datasetColumnTag
+{
+	padding: 2px 6px;
+	font-size: .75rem;
+	border-radius: 10px;
+	background: rgba(0,0,0,.08);
+}
+
+
+#datasetTable td.selected
+{
+	outline: 2px solid var(--accent-color);
+	outline-offset: -2px;
+}
+
+
+#datasetTable td.editing
+{
+	padding: 0;
+}
+
+
+#datasetTable td input
+{
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: inherit;
+	font: inherit;
+}
+
+
+#columnInspectorSaveBtn
+{
+	margin-top: var(--spacing-md);
+	border: 1px solid var(--color-text);
+	width: 100%;
+}

@@ -1,0 +1,149 @@
+body, main
+{
+	height: 100%;
+}
+
+#title
+{
+	text-align: center;
+	font-size: 5rem;
+}
+
+#projectListDiv
+{
+	padding: 0 15%;
+	max-height: 60vh;
+}
+
+#projectList
+{
+	padding: 0 5%;
+	overflow: auto;
+}
+
+#newProjectButton, #newProjectInput
+{
+	width: 100%;
+}
+
+#confirmProjectButton, #cancelProjectButton
+{
+	width: 50%;
+}
+
+#headerDiv
+{
+    position: fixed;
+    inset: 0 var(--spacing-lg) auto var(--spacing-lg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	
+	z-index: 80;
+}
+
+#menu, #tabs 
+{
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#contentDiv
+{
+	padding: 20px;
+	padding-top: 40px;
+
+	height: 100%;
+	box-sizing: border-box;
+
+	position: relative;
+	overflow: hidden;
+}
+
+.tab
+{
+	position: absolute;
+	inset: 0;
+
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.invisible
+{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.disabled
+{
+	background: var(--color-grey-4);
+	opacity: var(--opacity-50);
+}
+
+.active
+{
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.selected
+{
+    background: var(--color-bg-highlight);
+    color: var(--color-text-highlight);
+    font-weight: bold;
+}
+
+.nameEditInput
+{
+    padding: 4px 8px;
+	width: 50ch;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    background: transparent;
+    color: inherit;
+
+    font: inherit;
+    outline: none;
+
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.nameEditInput::placeholder
+{
+    opacity: 0.6;
+}
+
+.nameEditInput:hover
+{
+    background: var(--color-bg);
+}
+
+.nameEditInput:focus
+{
+    background: var(--color-bg);
+    border-color: #5ea9ff;
+    box-shadow: 0 0 0 2px rgba(94,169,255,.2);
+}
+
+.nameEditInput.invalid
+{
+    border-color: #d33;
+    box-shadow: 0 0 0 2px rgba(211,51,51,.2);
+}
+
+#columnCategoriesSelect
+{
+	height:80%;
+}

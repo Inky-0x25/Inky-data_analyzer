@@ -1,0 +1,12 @@
+table, table tr th, table tr td
+{
+	border: var(--line-thickness-xxs) solid var(--color-text-subdued);
+	border-collapse: collapse;
+	padding: var(--spacing-sm);
+	text-align: left;
+}
+
+table tr th
+{
+	background: var(--color-bg-highlight);
+}

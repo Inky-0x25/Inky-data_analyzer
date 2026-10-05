@@ -1,0 +1,24 @@
+#fileList 
+{
+    flex: 1;
+    overflow-y: auto;
+	
+	position: relative;
+	height: 50%;
+}
+
+#fileList li 
+{
+    margin: 6px 0;
+}
+
+#fileListActions 
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+

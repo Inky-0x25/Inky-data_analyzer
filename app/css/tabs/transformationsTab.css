@@ -1,0 +1,74 @@
+#transformationTree
+{
+	height: 70vh;
+	flex: 1;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+#transformationTree ul
+{
+	list-style: none;
+	padding-left: var(--spacing-md);
+	margin: var(--spacing-xs) 0;
+}
+
+
+#transformationTree li
+{
+	cursor: pointer;
+	padding: var(--spacing-xs);
+	border-radius: 4px;
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+
+#transformationTree li.searching
+{
+	color: var(--color-text-subdued);
+	background: var(--color-bg-subdued);
+}
+
+
+#transformationTree li:hover
+{
+	background: var(--color-bg-subdued);
+}
+
+
+#transformationTree li.selected,
+#transformationTree li.selected:hover
+{
+	color: var(--color-text-highlight);
+	background: var(--color-bg-highlight);
+}
+
+
+#transformationTree li.selected .transformationSearchMatch
+{
+	color: var(--color-text-highlight);
+	background: var(--color-bg-highlight);
+}
+
+
+.transformationSearchMatch
+{
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+
+#transformationSearchInput
+{
+	width: 100%;
+	box-sizing: border-box;
+	margin: var(--spacing-md) 0;
+}
+
+.transformationPanel
+{
+	height: 60vh;
+}

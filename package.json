@@ -1,0 +1,39 @@
+{
+  "name": "Inky_Data_Analyzer",
+  "version": "0.0.1",
+  "description": "A local browser data analyzer",
+  "scripts": {
+    "dev": "vite",
+    "build-app": "vite build",
+    "server": "tsx server/index.ts",
+    "build-server": "tsc -p tsconfig.server.json",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "build": "vite build && tsc -p tsconfig.server.json"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.3.0",
+    "papaparse": "^5.5.4",
+    "react": "^19.2.7",
+    "react-dom": "^19.3.0",
+    "recharts": "^3.9.1",
+    "vite": "^8.1.2",
+    "wave-binder": "^0.0.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^26.3.0",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,1111 @@
+[
+	{
+		"name": "projectList",
+		"type": "SINGLE",
+		"path": "/projectList",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/projects",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "createProject",
+				"parameterName": "createProject",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateProject",
+				"parameterName": "updateProject",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteProject",
+				"parameterName": "deleteProject",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "selectedProject",
+		"type": "SINGLE",
+		"path": "/selectedProject",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "currentProject",
+		"type": "SINGLE",
+		"path": "/currentProject",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/projects/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedProject",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "updateProject",
+				"parameterName": "updateProject",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteProject",
+				"parameterName": "deleteProject",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "createProject",
+		"type": "SINGLE",
+		"path": "/createProject",
+		"la":
+		{
+			"type": "POST",
+			"addr": "/projects",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "createProjectRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "createProjectRequest",
+		"type": "SINGLE",
+		"path": "/createProjectRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "updateProject",
+		"type": "SINGLE",
+		"path": "/updateProject",
+		"la":
+		{
+			"type": "PATCH",
+			"addr": "/projects",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "updateProjectRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "updateProjectRequest",
+		"type": "SINGLE",
+		"path": "/updateProjectRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "deleteProject",
+		"type": "SINGLE",
+		"path": "/deleteProject",
+		"la":
+		{
+			"type": "DELETE",
+			"addr": "/projects/{id}",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "deleteProjectRequest",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			}
+		]
+	},
+	{
+		"name": "deleteProjectRequest",
+		"type": "SINGLE",
+		"path": "/deleteProjectRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+
+	{
+		"name": "datafileList",
+		"type": "SINGLE",
+		"path": "/datafileList",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/datafiles/project/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedProject",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "createDatafile",
+				"parameterName": "createDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "replaceDatafileContent",
+				"parameterName": "replaceDatafileContent",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "reparseDatafile",
+				"parameterName": "reparseDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateDatafile",
+				"parameterName": "updateDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDatafile",
+				"parameterName": "deleteDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "selectedDatafile",
+		"type": "SINGLE",
+		"path": "/selectedDatafile",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "datafileContent",
+		"type": "SINGLE",
+		"path": "/datafileContent",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/datafiles/{id}/content",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedDatafile",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "replaceDatafileContent",
+				"parameterName": "replaceDatafileContent",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "reparseDatafile",
+				"parameterName": "reparseDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "createDatafile",
+		"type": "SINGLE",
+		"path": "/createDatafile",
+		"la":
+		{
+			"type": "POST",
+			"addr": "/datafiles",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "createDatafileRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "createDatafileRequest",
+		"type": "SINGLE",
+		"path": "/createDatafileRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "replaceDatafileContent",
+		"type": "SINGLE",
+		"path": "/replaceDatafileContent",
+		"la":
+		{
+			"type": "PUT",
+			"addr": "/datafiles/content",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "replaceDatafileContentRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "replaceDatafileContentRequest",
+		"type": "SINGLE",
+		"path": "/replaceDatafileContentRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "reparseDatafile",
+		"type": "SINGLE",
+		"path": "/reparseDatafile",
+		"la":
+		{
+			"type": "POST",
+			"addr": "/datafiles/reparse",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "reparseDatafileRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "reparseDatafileRequest",
+		"type": "SINGLE",
+		"path": "/reparseDatafileRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "updateDatafile",
+		"type": "SINGLE",
+		"path": "/updateDatafile",
+		"la":
+		{
+			"type": "PATCH",
+			"addr": "/datafiles",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "updateDatafileRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "updateDatafileRequest",
+		"type": "SINGLE",
+		"path": "/updateDatafileRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "deleteDatafile",
+		"type": "SINGLE",
+		"path": "/deleteDatafile",
+		"la":
+		{
+			"type": "DELETE",
+			"addr": "/datafiles/{id}",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "deleteDatafileRequest",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			}
+		]
+	},
+	{
+		"name": "deleteDatafileRequest",
+		"type": "SINGLE",
+		"path": "/deleteDatafileRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+
+
+
+	{
+		"name": "datasetList",
+		"type": "SINGLE",
+		"path": "/datasetList",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/datasets/project/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedProject",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "datafileList",
+				"parameterName": "datafileList",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateDataset",
+				"parameterName": "updateDataset",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "reparseDatafile",
+				"parameterName": "reparseDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "replaceDatafileContent",
+				"parameterName": "replaceDatafileContent",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDataset",
+				"parameterName": "deleteDataset",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "selectedDataset",
+		"type": "SINGLE",
+		"path": "/selectedDataset",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "currentDataset",
+		"type": "SINGLE",
+		"path": "/currentDataset",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/datasets/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedDataset",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "updateDataset",
+				"parameterName": "updateDataset",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "reparseDatafile",
+				"parameterName": "reparseDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "replaceDatafileContent",
+				"parameterName": "replaceDatafileContent",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDataset",
+				"parameterName": "deleteDataset",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "datasetContent",
+		"type": "SINGLE",
+		"path": "/datasetContent",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/datasets/{id}/content",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedDataset",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "reparseDatafile",
+				"parameterName": "reparseDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "replaceDatafileContent",
+				"parameterName": "replaceDatafileContent",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateDataset",
+				"parameterName": "updateDataset",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDataset",
+				"parameterName": "deleteDataset",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "updateDataset",
+		"type": "SINGLE",
+		"path": "/updateDataset",
+		"la":
+		{
+			"type": "PATCH",
+			"addr": "/datasets",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "updateDatasetRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "updateDatasetRequest",
+		"type": "SINGLE",
+		"path": "/updateDatasetRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "deleteDataset",
+		"type": "SINGLE",
+		"path": "/deleteDataset",
+		"la":
+		{
+			"type": "DELETE",
+			"addr": "/datasets/{id}",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "deleteDatasetRequest",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			}
+		]
+	},
+	{
+		"name": "deleteDatasetRequest",
+		"type": "SINGLE",
+		"path": "/deleteDatasetRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	
+	
+	
+	{
+		"name": "datatransList",
+		"type": "SINGLE",
+		"path": "/datatransList",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/transformations/project/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedProject",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "createDatatrans",
+				"parameterName": "createDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateDatatrans",
+				"parameterName": "updateDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDatatrans",
+				"parameterName": "deleteDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDataset",
+				"parameterName": "deleteDataset",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "selectedDatatrans",
+		"type": "SINGLE",
+		"path": "/selectedDatatrans",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "currentDatatrans",
+		"type": "SINGLE",
+		"path": "/currentDatatrans",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/transformations/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedDatatrans",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "createDatatrans",
+				"parameterName": "createDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateDatatrans",
+				"parameterName": "updateDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDatatrans",
+				"parameterName": "deleteDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDataset",
+				"parameterName": "deleteDataset",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "datatransContent",
+		"type": "SINGLE",
+		"path": "/datatransContent",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/transformations/{id}/content",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedDatatrans",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "createDatatrans",
+				"parameterName": "createDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateDatatrans",
+				"parameterName": "updateDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDatatrans",
+				"parameterName": "deleteDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDataset",
+				"parameterName": "deleteDataset",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "reparseDatafile",
+				"parameterName": "reparseDatafile",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "replaceDatafileContent",
+				"parameterName": "replaceDatafileContent",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "createDatatrans",
+		"type": "SINGLE",
+		"path": "/createDatatrans",
+		"la":
+		{
+			"type": "POST",
+			"addr": "/transformations",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "createDatatransRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "createDatatransRequest",
+		"type": "SINGLE",
+		"path": "/createDatatransRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "updateDatatrans",
+		"type": "SINGLE",
+		"path": "/updateDatatrans",
+		"la":
+		{
+			"type": "PATCH",
+			"addr": "/transformations",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "updateDatatransRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "updateDatatransRequest",
+		"type": "SINGLE",
+		"path": "/updateDatatransRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "deleteDatatrans",
+		"type": "SINGLE",
+		"path": "/deleteDatatrans",
+		"la":
+		{
+			"type": "DELETE",
+			"addr": "/transformations/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "deleteDatatransRequest",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			}
+		]
+	},
+	{
+		"name": "deleteDatatransRequest",
+		"type": "SINGLE",
+		"path": "/deleteDatatransRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	
+	
+	
+	{
+		"name": "chartList",
+		"type": "SINGLE",
+		"path": "/chartList",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/charts/project/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedProject",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "createChart",
+				"parameterName": "createChart",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateChart",
+				"parameterName": "updateChart",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteChart",
+				"parameterName": "deleteChart",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDataset",
+				"parameterName": "deleteDataset",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDatatrans",
+				"parameterName": "deleteDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "selectedChart",
+		"type": "SINGLE",
+		"path": "/selectedChart",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "currentChart",
+		"type": "SINGLE",
+		"path": "/currentChart",
+		"la":
+		{
+			"type": "GET",
+			"addr": "/charts/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "selectedChart",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			},
+			{
+				"nodeName": "createChart",
+				"parameterName": "createChart",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "updateChart",
+				"parameterName": "updateChart",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteChart",
+				"parameterName": "deleteChart",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDataset",
+				"parameterName": "deleteDataset",
+				"isOptional": true,
+				"onUpdate": true
+			},
+			{
+				"nodeName": "deleteDatatrans",
+				"parameterName": "deleteDatatrans",
+				"isOptional": true,
+				"onUpdate": true
+			}
+		]
+	},
+	{
+		"name": "createChart",
+		"type": "SINGLE",
+		"path": "/createChart",
+		"la":
+		{
+			"type": "POST",
+			"addr": "/charts",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "createChartRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "createChartRequest",
+		"type": "SINGLE",
+		"path": "/createChartRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "updateChart",
+		"type": "SINGLE",
+		"path": "/updateChart",
+		"la":
+		{
+			"type": "PATCH",
+			"addr": "/charts",
+			"serviceName": "API",
+			"bodyType": "JSON_OBJECT"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "updateChartRequest",
+				"parameterName": "request",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "BODY"
+			}
+		]
+	},
+	{
+		"name": "updateChartRequest",
+		"type": "SINGLE",
+		"path": "/updateChartRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	},
+	{
+		"name": "deleteChart",
+		"type": "SINGLE",
+		"path": "/deleteChart",
+		"la":
+		{
+			"type": "DELETE",
+			"addr": "/charts/{id}",
+			"serviceName": "API"
+		},
+		"dep":
+		[
+			{
+				"nodeName": "deleteChartRequest",
+				"parameterName": "id",
+				"isOptional": false,
+				"onUpdate": true,
+				"type": "PATH_VARIABLE"
+			}
+		]
+	},
+	{
+		"name": "deleteChartRequest",
+		"type": "SINGLE",
+		"path": "/deleteChartRequest",
+		"la":
+		{
+			"type": "USER_SELECTION"
+		},
+		"dep": []
+	}
+]

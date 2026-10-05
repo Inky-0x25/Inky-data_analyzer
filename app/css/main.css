@@ -1,0 +1,18 @@
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/layout.css');
+
+@import url('./elements/buttons.css');
+@import url('./elements/tables.css');
+@import url('./elements/boxes.css');
+@import url('./elements/dropdown_menu.css');
+@import url('./elements/drop_zone.css');
+@import url('./elements/popups.css');
+
+@import url('./tabs/filesTab.css');
+@import url('./tabs/dataTab.css');
+@import url('./tabs/transformationsTab.css');
+@import url('./tabs/chartsTab.css');
+
+@import url('./base/specific.css');
+

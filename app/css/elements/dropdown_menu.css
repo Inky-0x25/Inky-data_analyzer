@@ -1,0 +1,45 @@
+.dropdown 
+{
+    position: relative;
+}
+
+.dropdown p
+{
+	padding: 5px 10px;
+}
+
+.dropdown-menu 
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-bg);
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	z-index: 80;
+	white-space: nowrap;
+}
+
+.dropdown-menu li button 
+{
+    display: block;
+	width: 100%;
+    padding: 10px 15px;
+    background: var(--color-bg);
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.dropdown-menu li button:hover 
+{
+    background: var(--color-bg);
+}
+
+.dropdown:hover .dropdown-menu 
+{
+    display: block;
+}

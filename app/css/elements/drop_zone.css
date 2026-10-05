@@ -1,0 +1,26 @@
+#dropZone
+{
+    border: 2px dashed var(--border-color, #999);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#dropZone:hover
+{
+	cursor: pointer;
+}
+
+#dropZone.dragging
+{
+    background-color: var(--color-bg);
+    border-color: cornflowerblue;
+    box-shadow: 0 0 16px rgba(100, 149, 237, 0.35);
+    transform: scale(1.02);
+}

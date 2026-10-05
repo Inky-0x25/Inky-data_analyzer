@@ -1,0 +1,31 @@
+Date,Region,Product,Category,Units Sold,Unit Price,Revenue,Customer Rating
+2026-01-05,North,Laptop Pro,Electronics,12,1299.99,15599.88,4.7
+2026-01-07,South,Office Chair,Furniture,25,249.50,6237.50,4.3
+2026-01-09,East,Wireless Mouse,Electronics,48,29.99,1439.52,4.5
+2026-01-12,West,Standing Desk,Furniture,14,499.00,6986.00,4.6
+2026-01-15,North,Monitor 27,Electronics,31,329.99,10229.69,4.4
+2026-01-18,South,Keyboard,Electronics,42,89.99,3779.58,4.2
+2026-01-21,East,Desk Lamp,Furniture,36,59.90,2156.40,4.1
+2026-01-24,West,Laptop Air,Electronics,18,999.00,17982.00,4.8
+2026-01-28,North,Bookshelf,Furniture,11,189.00,2079.00,4.0
+2026-02-02,South,USB Hub,Electronics,55,39.99,2199.45,4.3
+2026-02-05,East,Office Chair,Furniture,19,249.50,4740.50,4.5
+2026-02-08,West,Monitor 27,Electronics,27,329.99,8909.73,4.6
+2026-02-12,North,Standing Desk,Furniture,9,499.00,4491.00,4.7
+2026-02-15,South,Wireless Mouse,Electronics,63,29.99,1889.37,4.2
+2026-02-18,East,Laptop Pro,Electronics,15,1299.99,19499.85,4.9
+2026-02-21,West,Desk Lamp,Furniture,41,59.90,2455.90,4.1
+2026-02-25,North,Keyboard,Electronics,38,89.99,3419.62,4.4
+2026-02-28,South,Bookshelf,Furniture,16,189.00,3024.00,4.0
+2026-03-03,East,Laptop Air,Electronics,22,999.00,21978.00,4.7
+2026-03-06,West,USB Hub,Electronics,71,39.99,2839.29,4.5
+2026-03-10,North,Office Chair,Furniture,28,249.50,6986.00,4.6
+2026-03-13,South,Monitor 27,Electronics,35,329.99,11549.65,4.3
+2026-03-16,East,Standing Desk,Furniture,17,499.00,8483.00,4.8
+2026-03-20,West,Wireless Mouse,Electronics,59,29.99,1769.41,4.2
+2026-03-23,North,Desk Lamp,Furniture,44,59.90,2635.60,4.5
+2026-03-26,South,Laptop Pro,Electronics,13,1299.99,16899.87,4.6
+2026-03-29,East,Keyboard,Electronics,47,89.99,4229.53,4.4
+2026-04-02,West,Bookshelf,Furniture,21,189.00,3969.00,4.1
+2026-04-05,North,Laptop Air,Electronics,26,999.00,25974.00,4.9
+2026-04-08,South,USB Hub,Electronics,68,39.99,2719.32,4.3

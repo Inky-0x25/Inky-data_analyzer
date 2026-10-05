@@ -1,0 +1,218 @@
+#chartList
+{
+	height: 70vh;
+	flex: 1;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow-y: auto;
+}
+
+
+#chartList li
+{
+	cursor: pointer;
+	padding: var(--spacing-xs);
+	border-radius: 4px;
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+
+#chartList li.searching
+{
+	color: var(--color-text-subdued);
+	background: var(--color-bg-subdued);
+}
+
+
+#chartList li:hover
+{
+	background: var(--color-bg-subdued);
+}
+
+
+#chartList li.selected,
+#chartList li.selected:hover
+{
+	color: var(--color-text-highlight);
+	background: var(--color-bg-highlight);
+}
+
+
+#chartList li.selected .chartSearchMatch
+{
+	color: var(--color-text-highlight);
+	background: var(--color-bg-highlight);
+}
+
+
+.chartSearchMatch
+{
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+
+#chartSearchInput
+{
+	width: 100%;
+	box-sizing: border-box;
+	margin: var(--spacing-md) 0;
+}
+
+
+.chartItem
+{
+	cursor: pointer;
+}
+
+
+.chartPanel
+{
+	height: 40vh;
+}
+
+
+#chartVisualizationPopup
+{
+	position: fixed;
+	z-index: 99999;
+	inset: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	isolation: isolate;
+}
+
+
+#chartVisualizationPopupContent
+{
+	position: relative;
+	z-index: 100000;
+
+	width: 100vw;
+	height: 100vh;
+	padding: var(--spacing-md);
+
+	box-sizing: border-box;
+
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+
+	background: var(--color-bg);
+
+	display: flex;
+	flex-direction: column;
+
+	overflow: hidden;
+}
+
+
+.chartVisualization
+{
+	position: relative;
+	z-index: 100001;
+
+	flex: 1 1 auto;
+	width: 100%;
+	min-height: 0;
+
+	overflow: visible;
+}
+
+
+.chartVisualization .recharts-wrapper
+{
+	position: relative !important;
+	z-index: 100002 !important;
+}
+
+
+.chartVisualization .recharts-tooltip-wrapper
+{
+	z-index: 100005 !important;
+	pointer-events: none;
+}
+
+
+.chartVisualization .recharts-default-tooltip
+{
+	z-index: 100006 !important;
+}
+
+.chartVisualizationHeader
+{
+	flex-shrink: 0;
+}
+
+
+.chartVisualizationActions
+{
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-xs);
+}
+
+
+.chartVisualizationActions button
+{
+	color: var(--color-text);
+	background: var(--color-bg);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-sm);
+	padding: var(--spacing-xs) var(--spacing-sm);
+	cursor: pointer;
+}
+
+
+.chartVisualizationActions button:hover
+{
+	color: var(--color-text-highlight);
+	background: var(--color-bg-subdued);
+}
+
+
+.chartVisualizationActions button:disabled
+{
+	opacity: var(--opacity-50);
+	cursor: default;
+}
+
+
+.chartVisualization
+{
+	position: relative;
+	z-index: 100001;
+
+	flex: 1 1 auto;
+	width: 100%;
+	min-height: 0;
+
+	overflow: visible;
+}
+
+
+.chartVisualization .recharts-wrapper
+{
+	position: relative !important;
+	z-index: 100002 !important;
+}
+
+
+.chartVisualization .recharts-tooltip-wrapper
+{
+	z-index: 100005 !important;
+	pointer-events: none;
+}
+
+
+#chartVisualizationPopupContent
+{
+	position: relative;
+	z-index: 100000;
+
+	overflow: visible;
+}

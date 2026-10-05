@@ -1,0 +1,13 @@
+{
+  "payload": {
+    "customer": "giorgiozhou1@gmail.com",
+    "licenseId": "CONTEST-0010",
+    "features": [
+      "FULL"
+    ],
+    "expiry": "2030-12-31",
+    "instances": "25"
+  },
+  "payloadRaw": "{\"customer\":\"giorgiozhou1@gmail.com\",\"licenseId\":\"CONTEST-0010\",\"features\":[\"FULL\"],\"expiry\":\"2030-12-31\",\"instances\":\"25\"}",
+  "signature": "TmSSlvAn1T1giVpilbGyILqhdtsnQovKyAMRLjPIbw82KPER/xHWmJRVPnDUhYlgnCo7AsW4XhSiGKduS9z0WAIJy1+cGaIt1klmL5xdxgR7EXWgoOwR8lWE4nslSjhUVnkVaZijkIUGaUy1ADrYgZ+6Ax8cpEu+DrTNNAE6hlrEu5KGJ6gpsKlCqTYVJrM2xwYCC31zQRdlYzfiufNrfXfUjq9LXTW6gVi7n0fxW3z1CuV2sODWgMYLVsxExX0+BSIIykMlKKGFiw+5+JsY/ek9JkZA0LVVCkvWNTz6xbKssD+3V6qjAo9g9V6BX9BGC09Jx1tggWb2W1QioeclsQ=="
+}
