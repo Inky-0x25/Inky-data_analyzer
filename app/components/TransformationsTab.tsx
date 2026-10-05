@@ -838,12 +838,6 @@ export function TransformationsTab({
 				return {
 					conditionalModifications: []
 				};
-
-			case TransformationType.COMPUTE:
-			case TransformationType.GROUP:
-			case TransformationType.JOIN:
-			case TransformationType.PIVOT:
-				return {};
 		}
 	}
 
@@ -1354,15 +1348,6 @@ export function TransformationsTab({
 
 			case TransformationType.CHANGE:
 				return renderChangeSettings(
-					operationIndex,
-					operation
-				);
-
-			case TransformationType.COMPUTE:
-			case TransformationType.GROUP:
-			case TransformationType.JOIN:
-			case TransformationType.PIVOT:
-				return renderGenericSettings(
 					operationIndex,
 					operation
 				);

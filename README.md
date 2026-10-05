@@ -2,6 +2,8 @@
 
 Inky Data Analyzer is a local browser-based data analysis application built with TypeScript and React. It allows users to import local data files, inspect datasets, apply transformations, and create visualizations entirely through a local application.
 
+[Introduction video](https://www.youtube.com/watch?v=0PMEDAVdYA8)
+
 ## Features
 
 ### Data analysis

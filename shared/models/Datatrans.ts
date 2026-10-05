@@ -3,10 +3,6 @@ export const TransformationType =
 	FILTER: "filter",
 	EXCLUDE: "exclude",
 	CHANGE: "change",
-	COMPUTE: "compute",
-	GROUP: "group",
-	JOIN: "join",
-	PIVOT: "pivot",
 } as const;
 
 export type TransformationTypeValue = typeof TransformationType[keyof typeof TransformationType];

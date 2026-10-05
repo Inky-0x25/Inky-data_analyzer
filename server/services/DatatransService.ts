@@ -597,14 +597,6 @@ export class DatatransService
 							operation.settings
 						);
 					break;
-
-				case TransformationType.COMPUTE:
-				case TransformationType.GROUP:
-				case TransformationType.JOIN:
-				case TransformationType.PIVOT:
-					throw new Error(
-						`Transformation operation '${operation.type}' is not implemented`
-					);
 			}
 		}
 
